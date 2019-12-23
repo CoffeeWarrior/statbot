@@ -2,8 +2,9 @@ require("dotenv").config()
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { getEncryptedAccountID } = require("./functions/GET/getEncryptedAccountID")
-const { returnMatchData } = require("./functions/returnMatchData");
+const { returnMatchData } = require("./functions/utility/returnMatchData");
 const { accountNameFromMsg } = require("./functions/utility/accountNameFromMsg") 
+const { returnAverages } = require("./functions/utility/averages/returnAverages")
 
 const botChar = "!"
 
@@ -13,10 +14,18 @@ client.on('message', (msg) => {
         if(content.toLowerCase().includes("lookup")){
             const accountName = accountNameFromMsg(content);
             getEncryptedAccountID(accountName)
-            .then((encryptedAccountID) =>returnMatchData(encryptedAccountID))
-            .then(matchData => msg.reply(matchData))
+            .then((encryptedAccountID) => returnMatchData(encryptedAccountID))
+            //.then(matchData => {console.log(matchData); return matchData})
+            .then((matchData) => returnAverages(matchData))
             .catch(e => {
-                msg.reply(`there was an error, \nmessage: ${e.message} \nstatus: ${e.status}`)
+                if(e.status){
+                    console.log(e)
+                    msg.reply(`there was an error, \nmessage: ${e.message} \nstatus: ${e.status}`)
+                } else {
+                    console.log(e)
+                    msg.reply(`there was an error, \nmessage: ${e.message}`)
+                }
+                
             })
             
             

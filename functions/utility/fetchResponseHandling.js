@@ -2,6 +2,7 @@ const fetch = require("node-fetch")
 
 const fetchResponseHandling = (url) => {
     return fetch(url)
+    .catch(error => {throw error})
     .then((res) => {
         if(res.status >= 200 && res.status <= 300){ 
             return res.text().then(body => JSON.parse(body))
