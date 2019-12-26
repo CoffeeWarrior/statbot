@@ -5,9 +5,12 @@ const { findRolesMode } = require("./findRolesMode");
 const returnAverages = (matchDataList) => {
     const rateAverages = {
         kda : ((findAverageParticipantData(matchDataList, "kills") + findAverageParticipantData(matchDataList, "assists"))/findAverageParticipantData(matchDataList, "deaths")),
-        goldPerMin10 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "0-10"),
-        goldPerMin20 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "10-20"),
-        goldPerMin30 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "20-30"),
+        csPerMin10 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "0-10"),
+        csPerMin20 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "10-20"),
+        csPerMin30 : findAverageParticipantData(matchDataList, "creepsPerMinDeltas", "20-30"),
+        goldPerMin10 : findAverageParticipantData(matchDataList, "goldPerMinDeltas", "0-10"),
+        goldPerMin20 : findAverageParticipantData(matchDataList, "goldPerMinDeltas", "10-20"),
+        goldPerMin30 : findAverageParticipantData(matchDataList, "goldPerMinDeltas", "20-30"),
         visionScore : findAverageParticipantData(matchDataList, "visionScore"),
         winrate: findAverageParticipantData(matchDataList, "win"),
         turrets: findAverageParticipantData(matchDataList, "turretKills"),

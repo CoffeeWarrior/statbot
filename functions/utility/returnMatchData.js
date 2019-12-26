@@ -1,5 +1,5 @@
-const { getRankedMatchList } = require("../GET/getRankedMatchList");
-const { getMatchesData } = require("../GET/getMatchesData")
+const { getRankedMatchList } = require("../GET/matches/getRankedMatchList");
+const { getMatchesData } = require("../GET/matches/getMatchesData")
 //this function will call getMatchesData and getRankedMatchList. 
 //this function will return the match data of a specified encryptedAccountID. 
 //exported from bot.js to reduce uglyness in .then() calls

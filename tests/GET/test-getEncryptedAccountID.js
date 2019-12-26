@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { getEncryptedAccountID } = require("../../functions/GET/getEncryptedAccountID")
+const { getEncryptedAccountID } = require("../../functions/GET/matches/getEncryptedAccountID")
 
 describe('get encrypted account ID', function() {
     it("should return a matching encrypted summoner ID",function(){

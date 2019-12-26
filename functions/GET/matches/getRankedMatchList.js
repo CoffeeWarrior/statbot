@@ -1,5 +1,5 @@
 require("dotenv").config()
-const { fetchResponseHandling } = require("../utility/fetchResponseHandling");
+const { fetchResponseHandling } = require("../../utility/fetchResponseHandling");
 
 
 //this function will use the encrypted summoner id to return an array of last 5 (or fewer) ranked matches of the user.

@@ -1,5 +1,5 @@
 require("dotenv").config()
-const { fetchResponseHandling } = require("../utility/fetchResponseHandling")
+const { fetchResponseHandling } = require("../../utility/fetchResponseHandling")
 
 //this function will access riotAPI to get the encrypted Account id of a given user.
 //returns null on failure

@@ -1,5 +1,5 @@
 const { assert } = require("chai");
-const { getMatchesData } = require("../../functions/GET/getMatchesData")
+const { getMatchesData } = require("../../functions/GET/matches/getMatchesData")
 
 const sampleMatchList = [ 3238298096, 3235873560, 3234879639, 3233664043, 3233649946 ]
 const encryptedSummonerID = "j5DuYu1KCQXGFddgdE7nI7misCe8x0hto0NKzKhPzLdYzznlSUi1r_63";

@@ -1,5 +1,5 @@
 const {assert} = require('chai');
-const { getRankedMatchList } = require("../../functions/GET/getRankedMatchList")
+const { getRankedMatchList } = require("../../functions/GET/matches/getRankedMatchList")
 
 const encryptedSummonerID = "j5DuYu1KCQXGFddgdE7nI7misCe8x0hto0NKzKhPzLdYzznlSUi1r_63";
 

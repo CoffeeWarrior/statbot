@@ -1,6 +1,6 @@
 //takes matchList and encrypted account id, returns array of 5 (or less) containing objects of {teamData, participantData} for given user.
 require("dotenv").config()
-const { fetchResponseHandling } = require("../utility/fetchResponseHandling")
+const { fetchResponseHandling } = require("../../utility/fetchResponseHandling")
 
 const getMatchesData = (matchList, encryptedAccountID) => {
     const baseURL = "https://na1.api.riotgames.com/lol/match/v4/matches/";
