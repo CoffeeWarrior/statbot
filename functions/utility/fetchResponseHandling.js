@@ -17,7 +17,6 @@ const fetchResponseHandling = (url, retryAttempts = 3) => {
                         setTimeout(() => resolve(fetchResponseHandling(url), retryAttempts-1), res.headers.get("retry-after") * 1000);
                     })
                 case 404:
-                    
                     return fetchResponseHandling(url, retryAttempts-1)
                 case 401:
                     const e = new Error(res.statusText)
