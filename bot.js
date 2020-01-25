@@ -31,8 +31,9 @@ client.on('message', (msg) => {
             getEncryptedSummonerID(accountName)
             .then((encryptedAccountID) => getLeagueOfSummoner(encryptedAccountID))
             .then((rank) => getLeagueData(rank))
-            .then((a) => console.log(a))
+            .then(() => console.log("Lookup successful!"))
             .catch(e => console.log(e))
+            
         }
     }
 });

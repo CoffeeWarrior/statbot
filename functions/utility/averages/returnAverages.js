@@ -18,7 +18,7 @@ const returnAverages = (matchDataList) => {
         firstDragon: findAverageTeamData(matchDataList, "firstDragon"),
         role: findRolesMode(matchDataList)
     }
-    console.log(rateAverages)
+    // console.log(rateAverages)
     return rateAverages
 }
 
