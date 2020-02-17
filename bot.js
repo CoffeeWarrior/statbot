@@ -21,7 +21,7 @@ client.on('message', (msg) => {
                 getEncryptedAccountID(accountName)
                 .then((encryptedAccountID) => returnMatchData(encryptedAccountID))
                 .then((matchData) => returnAverages(matchData))
-                .then(averages => msg.channel.send(`**${accountName}**` + averagesString(averages)))
+                .then(averages => msg.channel.send(`**${accountName}:**` + averagesString(averages)))
                 .catch(e => {
                     if(e.status){
                         console.log(e)
