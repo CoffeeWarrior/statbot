@@ -8,4 +8,4 @@ const getEncryptedSummonerID = (accountName) => {
     .then(body => body.id)
 }
 
-exports.getEncryptedSummonerID = getEncryptedSummonerID;
+exports.getEncryptedSummonerID = getEncryptedSummonerID; 
