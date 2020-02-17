@@ -1,9 +1,11 @@
-const accountNameFromMsg = (msg) => {
-    name = msg.replace("!lookup", "");
-    let accountName = name.split(" ").reduce((name, currentVal) => {
-        return name + currentVal + " ";
-    });
-    return accountName;
+const accountNamesFromMsg = (msg) => {
+    var message = msg.replace("!lookup", "");
+    message = message.replace(/\s/g,'')
+    console.log(message)
+    let accountNames = message.replace(/joinedthelobby/gi, " ");
+    accountNames = accountNames.trim();
+    accountNames = accountNames.split(" ")
+    return accountNames;
 }
 
-exports.accountNameFromMsg = accountNameFromMsg;
+exports.accountNamesFromMsg = accountNamesFromMsg;
