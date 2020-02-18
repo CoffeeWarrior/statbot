@@ -4,7 +4,8 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "test": "mocha ./tests/*/test-*.js || true"
+    "test": "mocha ./tests/*/test-*.js || true",
+    "start": "node bot.js"
   },
   "author": "",
   "license": "ISC",
